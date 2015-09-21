@@ -9,7 +9,8 @@ var casper = require('casper').create({
 });
 var fs = require('fs');
 var clicks = 0;
-var x = require('casper').selectXPath; casper.start('https://www.indiegogo.com/projects/ jolla-tablet-world-s-first-crowdsourced-tablet #/funders');
+var x = require('casper').selectXPath; 
+casper.start('https://www.indiegogo.com/projects/jolla-tablet-world-s-first-crowdsourced-tablet#/funders');
 
 function clickAndSave() {
   fs.write('data/01-raw/temp.html', this.getHTML('html'), 'w');
